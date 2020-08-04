@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BEUEjercicio.Transactions
 {
     public class AlumnoBLL
-    {        
+    {
         //BLL Bussiness Logic Layer
         //Capa de Logica del Negocio
 
@@ -38,7 +39,8 @@ namespace BEUEjercicio.Transactions
             return db.Alumnoes.Find(id);
         }
 
-        public static void Update(Alumno alumno) {
+        public static void Update(Alumno alumno)
+        {
             using (Entities db = new Entities())
             {
                 using (var transaction = db.Database.BeginTransaction())
@@ -58,7 +60,7 @@ namespace BEUEjercicio.Transactions
                 }
             }
         }
-                               
+
         public static void Delete(int? id)
         {
             using (Entities db = new Entities())
@@ -83,9 +85,9 @@ namespace BEUEjercicio.Transactions
 
         public static List<Alumno> List()
         {
-            Entities db = new Entities(); 
+            Entities db = new Entities();
             //Instancia del contexto
-            
+
             /*List<Alumno> alumons = db.Alumnoes.ToList();
             List<Alumno> resultado = new List<Alumno>();
             foreach (Alumno a in alumons) {
@@ -97,12 +99,25 @@ namespace BEUEjercicio.Transactions
             //SQL -> SELECT * FROM dbo.Alumno WHERE sexo = 'M'
             //return db.Alumnoes.Where(x => x.sexo == "M").ToList();
 
-            return db.Alumnoes.ToList();
+            return db.Alumnoes.OrderBy(x => x.apellidos).ToList();
 
             //Los metodos del EntityFramework se denomina Linq, 
             //y la evluacion de condiciones lambda
         }
 
+        public static List<Alumno> ListToNames()
+        {
+            Entities db = new Entities();
+            List<Alumno> result = new List<Alumno>();
+            db.Alumnoes.ToList().ForEach(x =>
+                result.Add(
+                    new Alumno
+                    {
+                        nombres = x.nombres + " " + x.apellidos,
+                        idalumno = x.idalumno
+                    }));
+            return result;
+        }
 
         private static List<Alumno> GetAlumnos(string criterio)
         {
@@ -110,6 +125,12 @@ namespace BEUEjercicio.Transactions
             //Posibles resultados => Quintana, Quintero, Pulloquinga, Quingaluisa...
             Entities db = new Entities();
             return db.Alumnoes.Where(x => x.apellidos.ToLower().Contains(criterio)).ToList();
+        }
+
+        public static List<Alumno> List(string criterio)
+        {
+            Entities db = new Entities();
+            return db.Alumnoes.Where(x => x.cedula.Contains(criterio)).ToList();
         }
 
         private static Alumno GetAlumno(string cedula)

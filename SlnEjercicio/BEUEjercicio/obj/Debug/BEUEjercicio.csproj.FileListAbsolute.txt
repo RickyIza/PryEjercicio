@@ -3,8 +3,10 @@ C:\Users\rckik\source\repos\PryEjercicio\SlnEjercicio\BEUEjercicio\bin\Debug\BEU
 C:\Users\rckik\source\repos\PryEjercicio\SlnEjercicio\BEUEjercicio\bin\Debug\BEUEjercicio.pdb
 C:\Users\rckik\source\repos\PryEjercicio\SlnEjercicio\BEUEjercicio\bin\Debug\EntityFramework.dll
 C:\Users\rckik\source\repos\PryEjercicio\SlnEjercicio\BEUEjercicio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rckik\source\repos\PryEjercicio\SlnEjercicio\BEUEjercicio\bin\Debug\Newtonsoft.Json.dll
 C:\Users\rckik\source\repos\PryEjercicio\SlnEjercicio\BEUEjercicio\bin\Debug\EntityFramework.xml
 C:\Users\rckik\source\repos\PryEjercicio\SlnEjercicio\BEUEjercicio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rckik\source\repos\PryEjercicio\SlnEjercicio\BEUEjercicio\bin\Debug\Newtonsoft.Json.xml
 C:\Users\rckik\source\repos\PryEjercicio\SlnEjercicio\BEUEjercicio\obj\Debug\BEUEjercicio.csprojAssemblyReference.cache
 C:\Users\rckik\source\repos\PryEjercicio\SlnEjercicio\BEUEjercicio\obj\Debug\BEUEjercicio.csproj.CoreCompileInputs.cache
 C:\Users\rckik\source\repos\PryEjercicio\SlnEjercicio\BEUEjercicio\obj\Debug\BEUEjercicio.csproj.CopyComplete

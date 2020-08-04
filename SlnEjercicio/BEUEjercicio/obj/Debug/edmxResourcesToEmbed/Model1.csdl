@@ -141,5 +141,30 @@
       <End Role="Materia" EntitySet="Materias" />
       <End Role="Matricula" EntitySet="Matriculas" />
     </AssociationSet>
+    <EntitySet Name="Maquinarias" EntityType="DBESCOLASTICOModel.Maquinaria" />
+    <EntitySet Name="Carreras" EntityType="DBESCOLASTICOModel.Carrera" />
   </EntityContainer>
+  <EntityType Name="Maquinaria">
+    <Key>
+      <PropertyRef Name="idmaquinaria" />
+    </Key>
+    <Property Name="idmaquinaria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_adquisicion" Type="DateTime" Precision="0" />
+    <Property Name="precio" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="porcentaje_depreciacion" Type="Decimal" Precision="4" Scale="2" />
+  </EntityType>
+  <EntityType Name="Carrera">
+    <Key>
+      <PropertyRef Name="idcarrera" />
+    </Key>
+    <Property Name="idcarrera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="departamento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="modalidad" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="duracion" Type="Int32" />
+    <Property Name="coordinador" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="titulo_otorgado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

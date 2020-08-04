@@ -15,6 +15,8 @@
         <AssociationConnector Association="DBESCOLASTICOModel.FK_Materia_Area" ManuallyRouted="false" />
         <AssociationConnector Association="DBESCOLASTICOModel.FK_Calificaciones_Matricula" ManuallyRouted="false" />
         <AssociationConnector Association="DBESCOLASTICOModel.FK_Matricula_Materia" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBESCOLASTICOModel.Maquinaria" Width="1.5" PointX="7.5" PointY="3.75" />
+        <EntityTypeShape EntityType="DBESCOLASTICOModel.Carrera" Width="1.5" PointX="10.25" PointY="2.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

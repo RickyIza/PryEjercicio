@@ -69,5 +69,30 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Maquinarias">
+      <EntityTypeMapping TypeName="DBESCOLASTICOModel.Maquinaria">
+        <MappingFragment StoreEntitySet="Maquinaria">
+          <ScalarProperty Name="porcentaje_depreciacion" ColumnName="porcentaje_depreciacion" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="fecha_adquisicion" ColumnName="fecha_adquisicion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idmaquinaria" ColumnName="idmaquinaria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carreras">
+      <EntityTypeMapping TypeName="DBESCOLASTICOModel.Carrera">
+        <MappingFragment StoreEntitySet="Carrera">
+          <ScalarProperty Name="titulo_otorgado" ColumnName="titulo_otorgado" />
+          <ScalarProperty Name="coordinador" ColumnName="coordinador" />
+          <ScalarProperty Name="duracion" ColumnName="duracion" />
+          <ScalarProperty Name="modalidad" ColumnName="modalidad" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idcarrera" ColumnName="idcarrera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
